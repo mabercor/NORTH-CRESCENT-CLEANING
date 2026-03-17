@@ -31,6 +31,9 @@
     document.body.style.overflow = 'hidden';
     hamburger.classList.add('active');
     hamburger.setAttribute('aria-expanded', 'true');
+    /* Move focus inside the menu */
+    var firstFocusable = mobileMenu.querySelector('button, a, [tabindex="0"]');
+    if (firstFocusable) firstFocusable.focus();
   }
 
   function closeMenu() {
@@ -38,6 +41,33 @@
     document.body.style.overflow = '';
     hamburger.classList.remove('active');
     hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.focus();
+  }
+
+  /* Trap focus inside mobile menu while open */
+  if (mobileMenu) {
+    mobileMenu.addEventListener('keydown', function (e) {
+      if (!mobileMenu.classList.contains('open')) return;
+      var focusable = Array.from(mobileMenu.querySelectorAll('button, a, [tabindex="0"]'));
+      var first = focusable[0];
+      var last = focusable[focusable.length - 1];
+      if (e.key === 'Tab') {
+        if (e.shiftKey) {
+          if (document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          }
+        } else {
+          if (document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+      }
+      if (e.key === 'Escape') {
+        closeMenu();
+      }
+    });
   }
 
   if (hamburger) hamburger.addEventListener('click', openMenu);
@@ -131,11 +161,27 @@
   /* ─── Contact form — Formspree submission ──────────────────── */
   var contactForm = document.getElementById('contact-form');
   var formSuccess = document.getElementById('form-success');
+  var formError = document.getElementById('form-error');
   var submitBtn = document.getElementById('form-submit-btn');
+
+  function showFormError(msg) {
+    if (formError) {
+      formError.textContent = msg;
+      formError.style.display = 'block';
+    }
+  }
+
+  function clearFormError() {
+    if (formError) {
+      formError.textContent = '';
+      formError.style.display = 'none';
+    }
+  }
 
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
+      clearFormError();
 
       var formData = new FormData(contactForm);
 
@@ -154,25 +200,26 @@
             contactForm.reset();
             contactForm.style.display = 'none';
             if (formSuccess) {
+              formSuccess.textContent = '✅ Thank you! We received your request and will get back to you shortly.';
               formSuccess.style.display = 'block';
             }
           } else {
             return response.json().then(function (data) {
               var msg =
                 data.errors && data.errors.length
-                  ? data.errors.map(function (e) { return e.message; }).join(', ')
+                  ? data.errors.map(function (err) { return err.message; }).join(', ')
                   : 'There was an error sending your message. Please try again.';
-              alert(msg);
+              showFormError('⚠️ ' + msg);
             });
           }
         })
         .catch(function () {
-          alert('Network error. Please check your connection and try again.');
+          showFormError('⚠️ Network error. Please check your connection and try again.');
         })
         .finally(function () {
           if (submitBtn) {
             submitBtn.disabled = false;
-            submitBtn.textContent = 'Send My Request';
+            submitBtn.textContent = 'Send My Request →';
           }
         });
     });

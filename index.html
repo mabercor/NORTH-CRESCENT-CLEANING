@@ -22,8 +22,77 @@
 
   <link rel="stylesheet" href="styles.css" />
 
+  <!-- Canonical & Open Graph image -->
+  <link rel="canonical" href="https://www.northcrescentcleaning.com" />
+  <meta property="og:image" content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'><rect width='1200' height='630' fill='%231E3A5F'/><text x='600' y='270' text-anchor='middle' font-size='90' font-family='Arial' fill='%234A9B8C'>🧹</text><text x='600' y='380' text-anchor='middle' font-size='52' font-weight='bold' font-family='Arial' fill='white'>North Crescent</text><text x='600' y='445' text-anchor='middle' font-size='30' font-family='Arial' fill='rgba(255,255,255,0.7)'>Facility Solutions Inc — Moncton, NB</text></svg>" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="robots" content="index, follow" />
+
   <!-- Favicon placeholder -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231E3A5F'/><text y='70' x='50' text-anchor='middle' font-size='55' font-family='Arial' fill='%234A9B8C'>NC</text></svg>" />
+
+  <!-- Schema.org LocalBusiness structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.northcrescentcleaning.com",
+    "name": "North Crescent Facility Solutions Inc",
+    "description": "Professional cleaning services in Moncton, Dieppe, Riverview & Shediac, NB. Residential, commercial, deep cleaning, move-in/out, Airbnb & post-construction.",
+    "url": "https://www.northcrescentcleaning.com",
+    "telephone": "+1-428-888-0542",
+    "email": "info@northcrescentcleaning.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Moncton",
+      "addressRegion": "NB",
+      "addressCountry": "CA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 46.0878,
+      "longitude": -64.7782
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Moncton" },
+      { "@type": "City", "name": "Dieppe" },
+      { "@type": "City", "name": "Riverview" },
+      { "@type": "City", "name": "Shediac" }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/northcrescentcleaningsolutions",
+      "https://www.instagram.com/northcrescentcleaningsolutions"
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday"],
+        "opens": "09:00",
+        "closes": "16:00"
+      }
+    ],
+    "priceRange": "$$",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Cleaning Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Residential Cleaning" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Deep Cleaning" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Move-In / Move-Out Cleaning" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial & Office Cleaning" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Post-Construction Cleaning" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Airbnb / Short-Term Rental Cleaning" } }
+      ]
+    }
+  }
+  </script>
 </head>
 
 <body>
@@ -45,6 +114,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
         <li><a href="#service-areas">Areas</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -71,6 +141,7 @@
     <a href="#about">About Us</a>
     <a href="#services">Services</a>
     <a href="#why-us">Why Choose Us</a>
+    <a href="#testimonials">Reviews</a>
     <a href="#service-areas">Service Areas</a>
     <a href="#contact">Contact</a>
     <a href="#contact" class="btn btn-primary" style="margin-top:1rem;">Get a Free Quote</a>
@@ -421,6 +492,86 @@
 
 
   <!-- ═══════════════════════════════════════
+       TESTIMONIALS SECTION
+  ═══════════════════════════════════════ -->
+  <section id="testimonials" class="section-padding" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <header class="section-header fade-in">
+        <span class="section-label">Client Reviews</span>
+        <h2 id="testimonials-heading">
+          What Our Clients Say
+        </h2>
+        <p>
+          We let our results speak for themselves — but our clients
+          are happy to speak up too.
+        </p>
+      </header>
+
+      <div class="testimonials-grid">
+
+        <blockquote class="testimonial-card fade-in fade-in-delay-1">
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="testimonial-text">
+            "North Crescent did an incredible deep clean of our home before we listed
+            it for sale. Every single room was spotless — even the grout in the
+            bathrooms looked brand new. Our realtor said it made a huge difference.
+            Highly recommend!"
+          </p>
+          <footer class="testimonial-author">
+            <div class="testimonial-avatar" aria-hidden="true">S</div>
+            <div>
+              <cite class="testimonial-name">Sarah M.</cite>
+              <span class="testimonial-location">Moncton, NB</span>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial-card fade-in fade-in-delay-2">
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="testimonial-text">
+            "We use North Crescent for our Airbnb turnover cleans and they are
+            simply the best. They're always on time, they follow our checklist,
+            and our guests consistently mention the cleanliness in their reviews.
+            Our average rating went from 4.6 to 4.9 after switching to them."
+          </p>
+          <footer class="testimonial-author">
+            <div class="testimonial-avatar" aria-hidden="true">M</div>
+            <div>
+              <cite class="testimonial-name">Marc T.</cite>
+              <span class="testimonial-location">Dieppe, NB — Airbnb Host</span>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial-card fade-in fade-in-delay-3">
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="testimonial-text">
+            "After our basement renovation, the dust and debris were overwhelming.
+            North Crescent's post-construction team came in and completely
+            transformed the space. Professional, thorough, and great communicators.
+            I'll be using them for regular cleaning from now on."
+          </p>
+          <footer class="testimonial-author">
+            <div class="testimonial-avatar" aria-hidden="true">J</div>
+            <div>
+              <cite class="testimonial-name">Jennifer L.</cite>
+              <span class="testimonial-location">Riverview, NB</span>
+            </div>
+          </footer>
+        </blockquote>
+
+      </div>
+
+      <div class="testimonials-cta fade-in">
+        <p>Join dozens of satisfied homeowners and businesses in the Greater Moncton area.</p>
+        <a href="#contact" class="btn btn-primary">Book Your First Clean →</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
        SERVICE AREAS
   ═══════════════════════════════════════ -->
   <section id="service-areas" class="section-padding" aria-labelledby="areas-heading">
@@ -722,6 +873,7 @@
             </p>
           </form>
 
+          <div id="form-error" class="form-error" role="alert" aria-live="assertive"></div>
           <div id="form-success" class="form-success" role="alert" aria-live="polite">
             ✅ Thank you! We received your request and will get back to you shortly.
           </div>
@@ -827,8 +979,7 @@
         </p>
         <nav aria-label="Footer legal links">
           <div class="footer-bottom-links">
-            <a href="#contact">Privacy Policy</a>
-            <a href="#contact">Terms of Service</a>
+            <span class="footer-bottom-legal">Professional Cleaning Services — Moncton, NB, Canada</span>
           </div>
         </nav>
       </div>
