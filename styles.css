@@ -295,6 +295,49 @@ p {
   display: none;
 }
 
+/* --- Language Toggle Button --- */
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.38rem 0.8rem;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1.5px solid rgba(255, 255, 255, 0.28);
+  border-radius: var(--radius-full);
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 700;
+  font-family: var(--font-primary);
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.lang-btn:hover,
+.lang-btn:focus-visible {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.5);
+  outline: none;
+}
+
+.lang-flag {
+  font-size: 1rem;
+  line-height: 1;
+  display: inline-block;
+}
+
+.lang-btn-mobile {
+  font-size: 1rem;
+  padding: 0.55rem 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
 .hamburger {
   display: flex;
   flex-direction: column;
@@ -1214,7 +1257,6 @@ p {
   font-weight: 500;
   font-size: 0.9rem;
 }
-}
 
 /* --- Testimonials Section --- */
 #testimonials {
@@ -1622,6 +1664,10 @@ footer {
   }
 
   .hamburger {
+    display: none;
+  }
+
+  .lang-btn-mobile {
     display: none;
   }
 
