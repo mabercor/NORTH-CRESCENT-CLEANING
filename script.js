@@ -278,22 +278,48 @@
     en: {
       'skip': 'Skip to main content',
       'nav.about': 'About', 'nav.services': 'Services',
+      'nav.gallery': 'Gallery',
       'nav.whyus': 'Why Us', 'nav.reviews': 'Reviews',
       'nav.areas': 'Areas', 'nav.contact': 'Contact',
       'nav.cta': 'Get a Free Quote',
       'mobile.about': 'About Us', 'mobile.services': 'Services',
+      'mobile.gallery': 'Gallery',
       'mobile.whyus': 'Why Choose Us', 'mobile.reviews': 'Reviews',
-      'mobile.areas': 'Service Areas', 'mobile.contact': 'Contact'
+      'mobile.areas': 'Service Areas', 'mobile.contact': 'Contact',
+      'gallery.label': 'Our Work', 'gallery.heading': 'Real Results, Real Spaces',
+      'gallery.subheading': 'From spotless homes to sparkling commercial spaces — see the North Crescent difference for yourself.',
+      'gallery.cat1': 'Residential',    'gallery.cap1': 'Residential Cleaning — Moncton, NB',
+      'gallery.cat2': 'Exterior',       'gallery.cap2': 'Snow Removal — Residential Exterior',
+      'gallery.cat3': 'Post-Construction','gallery.cap3': 'Post-Construction Cleaning — New Build',
+      'gallery.cat4': 'Commercial',     'gallery.cap4': 'Commercial Cleaning — Office & Retail',
+      'gallery.cat5': 'Institutional',  'gallery.cap5': 'Institutional Cleaning — School & Public Spaces',
+      'gallery.cat6': 'Building Services','gallery.cap6': 'Professional Hallway & Common Area Cleaning',
+      'gallery.ctaText': 'Every photo represents a satisfied client and a promise kept.',
+      'gallery.ctaBtn': 'Book Your Clean Today →',
+      'footer.gallery': 'Gallery'
     },
     fr: {
       'skip': 'Passer au contenu principal',
       'nav.about': 'À propos', 'nav.services': 'Services',
+      'nav.gallery': 'Galerie',
       'nav.whyus': 'Pourquoi nous', 'nav.reviews': 'Avis',
       'nav.areas': 'Zones', 'nav.contact': 'Contact',
       'nav.cta': 'Devis gratuit',
       'mobile.about': 'À propos de nous', 'mobile.services': 'Services',
+      'mobile.gallery': 'Galerie',
       'mobile.whyus': 'Pourquoi nous choisir', 'mobile.reviews': 'Avis',
-      'mobile.areas': 'Zones desservies', 'mobile.contact': 'Contact'
+      'mobile.areas': 'Zones desservies', 'mobile.contact': 'Contact',
+      'gallery.label': 'Notre travail', 'gallery.heading': 'Résultats réels, espaces réels',
+      'gallery.subheading': 'Des maisons impeccables aux espaces commerciaux étincelants — voyez la différence North Crescent par vous-même.',
+      'gallery.cat1': 'Résidentiel',      'gallery.cap1': 'Nettoyage résidentiel — Moncton, NB',
+      'gallery.cat2': 'Extérieur',        'gallery.cap2': 'Déneigement — Extérieur résidentiel',
+      'gallery.cat3': 'Après construction','gallery.cap3': 'Nettoyage après construction — Nouvelle construction',
+      'gallery.cat4': 'Commercial',       'gallery.cap4': 'Nettoyage commercial — Bureau et commerce',
+      'gallery.cat5': 'Institutionnel',   'gallery.cap5': 'Nettoyage institutionnel — École et espaces publics',
+      'gallery.cat6': 'Services immeuble','gallery.cap6': 'Nettoyage professionnel des couloirs et aires communes',
+      'gallery.ctaText': 'Chaque photo représente un client satisfait et une promesse tenue.',
+      'gallery.ctaBtn': 'Réservez votre nettoyage →',
+      'footer.gallery': 'Galerie'
     }
   };
 
@@ -745,6 +771,60 @@
     if (btn2) { btn2.addEventListener('click', toggle); }
     /* Apply saved / default language on load */
     applyLang(currentLang);
+  }());
+
+  /* ─── Gallery Lightbox ───────────────────────────────────── */
+  (function () {
+    var lightbox  = document.getElementById('gallery-lightbox');
+    var lbImg     = document.getElementById('gallery-lb-img');
+    var lbCaption = document.getElementById('gallery-lb-caption');
+    var lbClose   = document.getElementById('gallery-lb-close');
+    var lbBackdrop = lightbox ? lightbox.querySelector('.gallery-lb-backdrop') : null;
+
+    if (!lightbox) { return; }
+
+    function openLightbox(src, alt, caption) {
+      lbImg.src = src;
+      lbImg.alt = alt;
+      lbCaption.textContent = caption || '';
+      lightbox.hidden = false;
+      document.body.style.overflow = 'hidden';
+      if (lbClose) { lbClose.focus(); }
+    }
+
+    function closeLightbox() {
+      lightbox.hidden = true;
+      document.body.style.overflow = '';
+      lbImg.src = '';
+    }
+
+    /* Open on gallery item click */
+    document.querySelectorAll('.gallery-item').forEach(function (item) {
+      item.addEventListener('click', function () {
+        var img     = item.querySelector('img');
+        var captionKey = currentLang === 'fr' ? 'data-caption-fr' : 'data-caption-en';
+        var caption = item.getAttribute(captionKey) || item.getAttribute('data-caption-en') || '';
+        if (img) { openLightbox(img.src, img.alt, caption); }
+      });
+      /* Keyboard: Enter / Space */
+      item.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          item.click();
+        }
+      });
+    });
+
+    /* Close button */
+    if (lbClose) { lbClose.addEventListener('click', closeLightbox); }
+
+    /* Click on backdrop */
+    if (lbBackdrop) { lbBackdrop.addEventListener('click', closeLightbox); }
+
+    /* Escape key */
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !lightbox.hidden) { closeLightbox(); }
+    });
   }());
 
 })();

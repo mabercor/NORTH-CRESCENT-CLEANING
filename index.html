@@ -193,7 +193,9 @@
   <nav id="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-container">
       <a href="#hero" class="nav-logo" aria-label="North Crescent Facility Solutions — Home">
-        <div class="nav-logo-icon" aria-hidden="true">🧹</div>
+        <span class="nav-logo-img-wrap" aria-hidden="true">
+          <img src="images/logo-icon.svg" alt="" class="nav-logo-img" width="46" height="46" />
+        </span>
         <div class="nav-logo-text">
           <span class="name">North Crescent</span>
           <span class="tagline">Facility Solutions Inc</span>
@@ -203,6 +205,7 @@
       <ul class="nav-links" role="list">
         <li><a href="#about" data-i18n="nav.about">About</a></li>
         <li><a href="#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="#gallery" data-i18n="nav.gallery">Gallery</a></li>
         <li><a href="#why-us" data-i18n="nav.whyus">Why Us</a></li>
         <li><a href="#testimonials" data-i18n="nav.reviews">Reviews</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -237,6 +240,7 @@
     <button id="mobile-close" class="mobile-close" aria-label="Close menu">&times;</button>
     <a href="#about" data-i18n="mobile.about">About Us</a>
     <a href="#services" data-i18n="mobile.services">Services</a>
+    <a href="#gallery" data-i18n="mobile.gallery">Gallery</a>
     <a href="#why-us" data-i18n="mobile.whyus">Why Choose Us</a>
     <a href="#testimonials" data-i18n="mobile.reviews">Reviews</a>
     <a href="#faq">FAQ</a>
@@ -324,9 +328,8 @@
         <div class="about-visual fade-in">
           <div class="about-image-wrapper">
             <div class="about-image-placeholder">
-              <div class="big-icon" aria-hidden="true">🏢</div>
-              <p>North Crescent Facility Solutions Inc</p>
-              <p style="margin-top:0.5rem; font-size:0.8rem;">Moncton, New Brunswick, Canada</p>
+              <img src="images/logo.svg" alt="North Crescent Facility Solutions Inc" class="about-logo-img" />
+              <p style="margin-top:0.75rem; font-size:0.8rem;">Moncton, New Brunswick, Canada</p>
             </div>
           </div>
           <div class="about-badge" aria-label="5 years in business">
@@ -499,6 +502,122 @@
       </div>
     </div>
   </section>
+
+
+  <!-- ═══════════════════════════════════════
+       GALLERY SECTION
+  ═══════════════════════════════════════ -->
+  <section id="gallery" class="section-padding" aria-labelledby="gallery-heading">
+    <div class="container">
+
+      <header class="section-header fade-in">
+        <span class="section-label" data-i18n="gallery.label">Our Work</span>
+        <h2 id="gallery-heading" data-i18n="gallery.heading">Real Results, Real Spaces</h2>
+        <p data-i18n="gallery.subheading">
+          From spotless homes to sparkling commercial spaces — see the North Crescent
+          difference for yourself.
+        </p>
+      </header>
+
+      <div class="gallery-grid">
+
+        <button class="gallery-item fade-in fade-in-delay-1"
+          aria-label="Residential cleaning service"
+          data-caption-en="Residential Cleaning — Moncton, NB"
+          data-caption-fr="Nettoyage résidentiel — Moncton, NB">
+          <img src="https://github.com/user-attachments/assets/294f01fd-595b-4333-bc6a-5370b87056da"
+            alt="North Crescent cleaner in uniform carefully cleaning a wood table in a residential living room"
+            loading="lazy" />
+          <div class="gallery-overlay" aria-hidden="true">
+            <span class="gallery-cat" data-i18n="gallery.cat1">Residential</span>
+            <p class="gallery-caption" data-i18n="gallery.cap1">Residential Cleaning — Moncton, NB</p>
+          </div>
+        </button>
+
+        <button class="gallery-item fade-in fade-in-delay-2"
+          aria-label="Snow removal service"
+          data-caption-en="Snow Removal — Residential Exterior"
+          data-caption-fr="Déneigement — Extérieur résidentiel">
+          <img src="https://github.com/user-attachments/assets/76120ebd-33f7-4467-ae15-8635f428c2ec"
+            alt="North Crescent technician in hi-vis vest shoveling snow from a residential driveway"
+            loading="lazy" />
+          <div class="gallery-overlay" aria-hidden="true">
+            <span class="gallery-cat" data-i18n="gallery.cat2">Exterior</span>
+            <p class="gallery-caption" data-i18n="gallery.cap2">Snow Removal — Residential Exterior</p>
+          </div>
+        </button>
+
+        <button class="gallery-item fade-in fade-in-delay-3"
+          aria-label="Post-construction cleaning"
+          data-caption-en="Post-Construction Cleaning — New Build"
+          data-caption-fr="Nettoyage après construction — Nouvelle construction">
+          <img src="https://github.com/user-attachments/assets/9d3c9b35-89df-4924-aa4d-8a9be9cdfe25"
+            alt="North Crescent cleaner with safety gear doing post-construction cleanup in an empty apartment"
+            loading="lazy" />
+          <div class="gallery-overlay" aria-hidden="true">
+            <span class="gallery-cat" data-i18n="gallery.cat3">Post-Construction</span>
+            <p class="gallery-caption" data-i18n="gallery.cap3">Post-Construction Cleaning — New Build</p>
+          </div>
+        </button>
+
+        <button class="gallery-item fade-in fade-in-delay-1"
+          aria-label="Commercial floor cleaning"
+          data-caption-en="Commercial Cleaning — Office &amp; Retail"
+          data-caption-fr="Nettoyage commercial — Bureau et commerce">
+          <img src="https://github.com/user-attachments/assets/e766382a-0493-4d5c-aebc-8e5688e08a5f"
+            alt="North Crescent technician sweeping commercial floor near ATM in an office lobby"
+            loading="lazy" />
+          <div class="gallery-overlay" aria-hidden="true">
+            <span class="gallery-cat" data-i18n="gallery.cat4">Commercial</span>
+            <p class="gallery-caption" data-i18n="gallery.cap4">Commercial Cleaning — Office &amp; Retail</p>
+          </div>
+        </button>
+
+        <button class="gallery-item fade-in fade-in-delay-2"
+          aria-label="School and institutional cleaning"
+          data-caption-en="Institutional Cleaning — School &amp; Public Spaces"
+          data-caption-fr="Nettoyage institutionnel — École et espaces publics">
+          <img src="https://github.com/user-attachments/assets/f96bff2a-88e7-4390-9bc9-2f201469e447"
+            alt="North Crescent cleaner maintaining a school classroom"
+            loading="lazy" />
+          <div class="gallery-overlay" aria-hidden="true">
+            <span class="gallery-cat" data-i18n="gallery.cat5">Institutional</span>
+            <p class="gallery-caption" data-i18n="gallery.cap5">Institutional Cleaning — School &amp; Public Spaces</p>
+          </div>
+        </button>
+
+        <button class="gallery-item fade-in fade-in-delay-3"
+          aria-label="Building hallway cleaning"
+          data-caption-en="Professional Hallway &amp; Common Area Cleaning"
+          data-caption-fr="Nettoyage professionnel des couloirs et aires communes">
+          <img src="https://github.com/user-attachments/assets/e68def47-25eb-40d9-91e7-8fc14aa99033"
+            alt="North Crescent professional cleaning a building hallway"
+            loading="lazy" />
+          <div class="gallery-overlay" aria-hidden="true">
+            <span class="gallery-cat" data-i18n="gallery.cat6">Building Services</span>
+            <p class="gallery-caption" data-i18n="gallery.cap6">Professional Hallway &amp; Common Area Cleaning</p>
+          </div>
+        </button>
+
+      </div>
+
+      <div class="gallery-cta fade-in">
+        <p data-i18n="gallery.ctaText">Every photo represents a satisfied client and a promise kept.</p>
+        <a href="#contact" class="btn btn-primary" data-i18n="gallery.ctaBtn">Book Your Clean Today →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Gallery Lightbox -->
+  <div id="gallery-lightbox" class="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+    <div class="gallery-lb-backdrop"></div>
+    <div class="gallery-lb-content">
+      <button id="gallery-lb-close" class="gallery-lb-close" aria-label="Close image viewer">&times;</button>
+      <img id="gallery-lb-img" src="" alt="" class="gallery-lb-img" />
+      <p id="gallery-lb-caption" class="gallery-lb-caption"></p>
+    </div>
+  </div>
 
 
   <!-- ═══════════════════════════════════════
@@ -1138,12 +1257,8 @@
 
         <!-- Brand -->
         <div class="footer-brand">
-          <a href="#hero" class="nav-logo" aria-label="North Crescent Facility Solutions — Home">
-            <div class="nav-logo-icon" aria-hidden="true">🧹</div>
-            <div class="nav-logo-text">
-              <span class="name">North Crescent</span>
-              <span class="tagline">Facility Solutions Inc</span>
-            </div>
+          <a href="#hero" aria-label="North Crescent Facility Solutions — Home">
+            <img src="images/logo.svg" alt="North Crescent Facility Solutions Inc" class="footer-logo-img" />
           </a>
           <p>
             Professional, reliable, and detail-oriented cleaning services
@@ -1183,6 +1298,7 @@
           <ul role="list">
             <li><a href="#about">About Us</a></li>
             <li><a href="#why-us">Why Choose Us</a></li>
+            <li><a href="#gallery" data-i18n="footer.gallery">Gallery</a></li>
             <li><a href="#testimonials">Reviews</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#service-areas">Service Areas</a></li>
