@@ -230,4 +230,34 @@
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
+
+  /* ─── FAQ accordion ─────────────────────────────────────── */
+  var faqButtons = document.querySelectorAll('.faq-question');
+
+  faqButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      var answerId = btn.getAttribute('aria-controls');
+      var answer = document.getElementById(answerId);
+
+      /* Close all other open items first */
+      faqButtons.forEach(function (other) {
+        if (other !== btn) {
+          other.setAttribute('aria-expanded', 'false');
+          var otherId = other.getAttribute('aria-controls');
+          var otherAnswer = document.getElementById(otherId);
+          if (otherAnswer) otherAnswer.hidden = true;
+          var icon = other.querySelector('.faq-icon');
+          if (icon) icon.textContent = '+';
+        }
+      });
+
+      /* Toggle the clicked item */
+      var nowExpanded = !expanded;
+      btn.setAttribute('aria-expanded', String(nowExpanded));
+      if (answer) answer.hidden = !nowExpanded;
+      var btnIcon = btn.querySelector('.faq-icon');
+      if (btnIcon) btnIcon.textContent = nowExpanded ? '−' : '+';
+    });
+  });
 })();

@@ -1,0 +1,17 @@
+{
+  "name": "North Crescent Facility Solutions Inc",
+  "short_name": "North Crescent",
+  "description": "Professional cleaning services in Moncton, NB",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1E3A5F",
+  "theme_color": "#1E3A5F",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231E3A5F'/><text y='70' x='50' text-anchor='middle' font-size='55' font-family='Arial' fill='%234A9B8C'>NC</text></svg>",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -29,8 +29,10 @@
   <meta property="og:image:height" content="630" />
   <meta name="robots" content="index, follow" />
 
-  <!-- Favicon placeholder -->
+  <!-- Favicon & manifest -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231E3A5F'/><text y='70' x='50' text-anchor='middle' font-size='55' font-family='Arial' fill='%234A9B8C'>NC</text></svg>" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="theme-color" content="#1E3A5F" />
 
   <!-- Schema.org LocalBusiness structured data -->
   <script type="application/ld+json">
@@ -93,9 +95,86 @@
     }
   }
   </script>
+
+  <!-- Schema.org FAQPage structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I need to be home during the cleaning?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not at all! Many of our clients provide us with a key or door code and go about their day. We are fully insured and trusted."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What cleaning products do you use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We use professional-grade, effective cleaning products. We also offer eco-friendly and pet-safe options upon request."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get a price / quote?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fill out the quote form on this page, call/text us at (428) 888-0542, or message us on WhatsApp. We'll get back to you quickly with a custom quote — no obligation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a cleaning take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A standard residential clean for a 2-bedroom home typically takes 2–3 hours. Deep cleans or move-out cleans may take longer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are you insured?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — North Crescent Facility Solutions Inc is fully insured. Your property is protected on every visit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I'm not satisfied with the clean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Contact us within 24 hours and we'll come back to make it right at no extra charge, no questions asked."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I schedule cleaning?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most families choose bi-weekly (every 2 weeks) for regular maintenance. Weekly cleaning is popular for busy households or pet owners."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you bring your own equipment and supplies?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! We arrive fully equipped with professional-grade tools and all necessary cleaning supplies."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
+
+  <!-- Skip to main content (keyboard accessibility) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- ═══════════════════════════════════════
        NAVIGATION
@@ -115,6 +194,7 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#why-us">Why Us</a></li>
         <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#service-areas">Areas</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -142,6 +222,7 @@
     <a href="#services">Services</a>
     <a href="#why-us">Why Choose Us</a>
     <a href="#testimonials">Reviews</a>
+    <a href="#faq">FAQ</a>
     <a href="#service-areas">Service Areas</a>
     <a href="#contact">Contact</a>
     <a href="#contact" class="btn btn-primary" style="margin-top:1rem;">Get a Free Quote</a>
@@ -152,6 +233,7 @@
        HERO SECTION
   ═══════════════════════════════════════ -->
   <section id="hero" aria-label="Hero">
+    <div id="main-content" tabindex="-1" style="position:absolute; top:0;"></div>
     <div class="hero-bg-pattern" aria-hidden="true"></div>
     <div class="hero-shapes" aria-hidden="true">
       <div class="hero-shape hero-shape-1"></div>
@@ -578,10 +660,17 @@
     <div class="container">
       <div class="areas-wrapper">
 
-        <div class="areas-map-placeholder fade-in" aria-label="Map placeholder for Greater Moncton area">
-          <div class="map-icon" aria-hidden="true">📍</div>
-          <h3 style="color:rgba(255,255,255,0.8); margin-bottom:0.5rem;">Greater Moncton Area</h3>
-          <p>Moncton · Dieppe · Riverview · Shediac</p>
+        <div class="areas-map-embed fade-in" aria-label="Map of Greater Moncton service area">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d87476.80398820673!2d-64.87745345!3d46.09282295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ca0ba1af5a5a649%3A0x45e8a0d1fdb4e668!2sMoncton%2C%20NB!5e0!3m2!1sen!2sca"
+            width="100%"
+            height="100%"
+            style="border:0; border-radius: var(--radius-lg);"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Map showing Greater Moncton service area including Moncton, Dieppe, Riverview and Shediac"
+          ></iframe>
         </div>
 
         <div class="areas-list-wrapper fade-in fade-in-delay-2">
@@ -885,6 +974,142 @@
 
 
   <!-- ═══════════════════════════════════════
+       FAQ SECTION
+  ═══════════════════════════════════════ -->
+  <section id="faq" class="section-padding" aria-labelledby="faq-heading">
+    <div class="container">
+      <header class="section-header fade-in">
+        <span class="section-label">FAQ</span>
+        <h2 id="faq-heading">Frequently Asked Questions</h2>
+        <p>
+          Everything you need to know before booking your first clean.
+          Still have questions? <a href="#contact" class="faq-contact-link">Contact us</a> — we're happy to help.
+        </p>
+      </header>
+
+      <div class="faq-grid">
+
+        <div class="faq-item fade-in fade-in-delay-1">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+            Do I need to be home during the cleaning?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div id="faq-answer-1" class="faq-answer" hidden>
+            <p>
+              Not at all! Many of our clients provide us with a key or door code
+              and go about their day. We are fully insured and trusted. Of course,
+              if you prefer to be home, that's perfectly fine too.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in fade-in-delay-2">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+            What cleaning products do you use?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div id="faq-answer-2" class="faq-answer" hidden>
+            <p>
+              We use professional-grade, effective cleaning products. We also offer
+              eco-friendly and pet-safe options upon request — just let us know
+              when you book and we'll bring the right supplies for your home.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in fade-in-delay-3">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+            How do I get a price / quote?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div id="faq-answer-3" class="faq-answer" hidden>
+            <p>
+              Simply fill out the quote form on this page, call/text us at
+              <a href="tel:+14288880542">(428) 888-0542</a>, or message us on WhatsApp.
+              We'll get back to you quickly with a custom quote based on your space
+              and needs — no obligation.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in fade-in-delay-1">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+            How long does a cleaning take?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div id="faq-answer-4" class="faq-answer" hidden>
+            <p>
+              It depends on the size of your space and the type of service. A standard
+              residential clean for a 2-bedroom home typically takes 2–3 hours.
+              A deep clean or move-out clean may take longer. We'll give you an
+              estimated time when we provide your quote.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in fade-in-delay-2">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+            Are you insured?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div id="faq-answer-5" class="faq-answer" hidden>
+            <p>
+              Yes — North Crescent Facility Solutions Inc is fully insured.
+              You can open your door with complete peace of mind knowing that
+              your property is protected on every visit.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in fade-in-delay-3">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-6">
+            What if I'm not satisfied with the clean?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div id="faq-answer-6" class="faq-answer" hidden>
+            <p>
+              Your satisfaction is our commitment. If something isn't right,
+              contact us within 24 hours and we'll come back to make it right —
+              at no extra charge, no questions asked.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in fade-in-delay-1">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-7">
+            How often should I schedule cleaning?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div id="faq-answer-7" class="faq-answer" hidden>
+            <p>
+              It depends on your lifestyle and needs. Most families choose bi-weekly
+              (every 2 weeks) for regular maintenance. Weekly cleaning is popular
+              for busy households or pet owners. Monthly deep cleans are great
+              for lighter-use spaces. We'll help you figure out the best schedule.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in fade-in-delay-2">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-8">
+            Do you bring your own equipment and supplies?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div id="faq-answer-8" class="faq-answer" hidden>
+            <p>
+              Yes! We arrive fully equipped with professional-grade tools and
+              all necessary cleaning supplies. You don't need to provide anything —
+              just let us in and we'll take care of the rest.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
        FOOTER
   ═══════════════════════════════════════ -->
   <footer aria-label="Site footer">
@@ -938,6 +1163,8 @@
           <ul role="list">
             <li><a href="#about">About Us</a></li>
             <li><a href="#why-us">Why Choose Us</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
             <li><a href="#service-areas">Service Areas</a></li>
             <li><a href="#contact">Get a Quote</a></li>
           </ul>
