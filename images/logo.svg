@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 450" role="img" aria-label="North Crescent Facility Solutions Inc — Professional Facility Cleaning">
+
+  <!-- ── LEFT TALL NAVY BUILDING ── -->
+  <rect x="84" y="28" width="82" height="210" rx="5" fill="#1B3A6B"/>
+  <rect x="96"  y="46" width="13" height="10" rx="2" fill="rgba(255,255,255,0.18)"/>
+  <rect x="117" y="46" width="13" height="10" rx="2" fill="rgba(255,255,255,0.18)"/>
+  <rect x="138" y="46" width="13" height="10" rx="2" fill="rgba(255,255,255,0.18)"/>
+  <rect x="96"  y="66" width="13" height="10" rx="2" fill="rgba(255,255,255,0.18)"/>
+  <rect x="117" y="66" width="13" height="10" rx="2" fill="rgba(255,255,255,0.18)"/>
+  <rect x="138" y="66" width="13" height="10" rx="2" fill="rgba(255,255,255,0.18)"/>
+  <rect x="96"  y="86" width="13" height="10" rx="2" fill="rgba(255,255,255,0.18)"/>
+  <rect x="117" y="86" width="13" height="10" rx="2" fill="rgba(255,255,255,0.18)"/>
+  <rect x="138" y="86" width="13" height="10" rx="2" fill="rgba(255,255,255,0.18)"/>
+  <rect x="96"  y="106" width="13" height="10" rx="2" fill="rgba(255,255,255,0.18)"/>
+  <rect x="117" y="106" width="13" height="10" rx="2" fill="rgba(255,255,255,0.18)"/>
+  <rect x="138" y="106" width="13" height="10" rx="2" fill="rgba(255,255,255,0.18)"/>
+
+  <!-- ── RIGHT TEAL BUILDING ── -->
+  <rect x="314" y="56" width="82" height="182" rx="5" fill="#2D9A78"/>
+  <rect x="326" y="74"  width="13" height="10" rx="2" fill="rgba(255,255,255,0.22)"/>
+  <rect x="347" y="74"  width="13" height="10" rx="2" fill="rgba(255,255,255,0.22)"/>
+  <rect x="368" y="74"  width="13" height="10" rx="2" fill="rgba(255,255,255,0.22)"/>
+  <rect x="326" y="94"  width="13" height="10" rx="2" fill="rgba(255,255,255,0.22)"/>
+  <rect x="347" y="94"  width="13" height="10" rx="2" fill="rgba(255,255,255,0.22)"/>
+  <rect x="368" y="94"  width="13" height="10" rx="2" fill="rgba(255,255,255,0.22)"/>
+  <rect x="326" y="114" width="13" height="10" rx="2" fill="rgba(255,255,255,0.22)"/>
+  <rect x="347" y="114" width="13" height="10" rx="2" fill="rgba(255,255,255,0.22)"/>
+  <rect x="368" y="114" width="13" height="10" rx="2" fill="rgba(255,255,255,0.22)"/>
+
+  <!-- ── CENTER CONNECTING BUILDING ── -->
+  <rect x="196" y="68" width="88" height="170" rx="5" fill="#3AA99C"/>
+
+  <!-- ── HOUSE SILHOUETTE (white, foreground) ── -->
+  <polygon points="174,184 306,184 240,130" fill="white"/>
+  <rect x="196" y="184" width="88" height="54" fill="white"/>
+  <rect x="220" y="199" width="40" height="25" rx="2" fill="#2D9A78"/>
+  <line x1="240" y1="199" x2="240" y2="224" stroke="white" stroke-width="2.5"/>
+  <line x1="220" y1="211" x2="260" y2="211" stroke="white" stroke-width="2.5"/>
+
+  <!-- ── WHITE SPARKLE STAR (4-pointed) ── -->
+  <path d="M240 104 L245 117 L258 122 L245 127 L240 140 L235 127 L222 122 L235 117 Z" fill="white"/>
+
+  <!-- ── GREEN CRESCENT ARC ── -->
+  <path d="M74,238 C142,198 338,198 406,238" stroke="#2D9A78" stroke-width="8" fill="none" stroke-linecap="round"/>
+
+  <!-- ── DECORATIVE: LEFT ASTERISK SPARKLE ── -->
+  <g transform="translate(72,120)" stroke="#2D9A78" stroke-width="2.2" stroke-linecap="round">
+    <line x1="0" y1="-11" x2="0" y2="11"/>
+    <line x1="-11" y1="0" x2="11" y2="0"/>
+    <line x1="-7.8" y1="-7.8" x2="7.8" y2="7.8"/>
+    <line x1="7.8" y1="-7.8" x2="-7.8" y2="7.8"/>
+  </g>
+  <circle cx="95"  cy="85"  r="6.5" fill="#1B3A6B"/>
+  <circle cx="80"  cy="68"  r="4"   fill="#2D9A78"/>
+  <circle cx="87"  cy="157" r="5"   fill="#2D9A78"/>
+
+  <!-- ── DECORATIVE: RIGHT ASTERISK SPARKLE ── -->
+  <g transform="translate(408,130)" stroke="#1B3A6B" stroke-width="2.2" stroke-linecap="round">
+    <line x1="0" y1="-10" x2="0" y2="10"/>
+    <line x1="-10" y1="0" x2="10" y2="0"/>
+    <line x1="-7" y1="-7" x2="7" y2="7"/>
+    <line x1="7" y1="-7" x2="-7" y2="7"/>
+  </g>
+  <circle cx="396" cy="88"  r="5.5" fill="#1B3A6B"/>
+  <circle cx="412" cy="170" r="4"   fill="#2D9A78"/>
+  <circle cx="393" cy="182" r="5.5" fill="#1B3A6B"/>
+
+  <!-- ── DECORATIVE: TOP SPARKLE ── -->
+  <g transform="translate(240,36)" stroke="#1B3A6B" stroke-width="2" stroke-linecap="round">
+    <line x1="0" y1="-8" x2="0" y2="8"/>
+    <line x1="-8" y1="0" x2="8" y2="0"/>
+    <line x1="-5.7" y1="-5.7" x2="5.7" y2="5.7"/>
+    <line x1="5.7" y1="-5.7" x2="-5.7" y2="5.7"/>
+  </g>
+  <circle cx="192" cy="36"  r="6"   fill="#2D9A78"/>
+  <circle cx="212" cy="22"  r="4"   fill="#1B3A6B"/>
+  <circle cx="274" cy="26"  r="4"   fill="#2D9A78"/>
+  <circle cx="295" cy="42"  r="6"   fill="#1B3A6B"/>
+
+  <!-- ══ TEXT ══ -->
+  <text x="240" y="298"
+    text-anchor="middle"
+    font-family="'Arial Black', Arial, sans-serif"
+    font-size="48" font-weight="900"
+    fill="#1B3A6B">North Crescent</text>
+
+  <text x="240" y="335"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="15" font-weight="700"
+    letter-spacing="4"
+    fill="#2D9A78">FACILITY SOLUTIONS INC</text>
+
+  <text x="240" y="378"
+    text-anchor="middle"
+    font-family="'Arial Black', Arial, sans-serif"
+    font-size="22" font-weight="900"
+    fill="#1B3A6B">Professional Facility Cleaning</text>
+
+</svg>

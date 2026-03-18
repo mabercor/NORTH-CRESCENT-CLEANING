@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.northcrescentcleaning.com/sitemap.xml
