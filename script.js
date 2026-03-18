@@ -795,7 +795,7 @@
     function closeLightbox() {
       lightbox.hidden = true;
       document.body.style.overflow = '';
-      lbImg.src = '';
+      lbImg.removeAttribute('src');
     }
 
     /* Open on gallery item click */
